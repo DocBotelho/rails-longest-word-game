@@ -3,8 +3,9 @@
 <p>Your word: <%= @attempt %></p>
 <p>Your translation: <%= @result[:translation] %></p>
 <p>Time Taken to answer: <%= @result[:time].floor %> secs</p>
-<p>Your score: <%= @result[:score].round %></p>
 <p>Message: <%= @result[:message] %></p>
+<p>Your score: <%= @result[:score].round %></p>
+<p>Your total score: <%= @total.round %></p>
 <h3>*********************************</h3>
 
 <%= link_to "Play again", game_path %>

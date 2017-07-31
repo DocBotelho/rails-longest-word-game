@@ -13,9 +13,12 @@ class WordsController < ApplicationController
     @start_time = Time.parse(params[:time]) # method .to_i doesn't work for time
     @end_time = Time.now
     @result = run_game(@attempt, @grid, @start_time, @end_time)
+    if session[:total].nil?
+      @total = session[:total] = @result[:score]
+    else
+      @total = session[:total] += @result[:score]
+    end
   end
-
-
 
 def generate_grid(grid_size)
   # TODO: generate random grid of letters
