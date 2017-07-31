@@ -1,0 +1,10 @@
+<h3>******** Now your result ********</h3>
+<p>Your grid: <strong><%= @grid.upcase %></strong></p>
+<p>Your word: <%= @attempt %></p>
+<p>Your translation: <%= @result[:translation] %></p>
+<p>Time Taken to answer: <%= @result[:time].floor %> secs</p>
+<p>Your score: <%= @result[:score].round %></p>
+<p>Message: <%= @result[:message] %></p>
+<h3>*********************************</h3>
+
+<%= link_to "Play again", game_path %>
